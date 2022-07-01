@@ -28,28 +28,25 @@ Building the validator
  1) Download and install [Isabelle/HOL](https://isabelle.in.tum.de)
 
  2) Install the Archive of Formal Proofs as indicated in [this
- page](https://www.isa-afp.org/using.shtml). We require version = Isabelle-2018,
+ page](https://www.isa-afp.org/using.shtml). We require version = Isabelle-2021-1,
  which, at the time of writing, is the current version.
 
  3) Generate sml code equivalent to the Isabelle theories by running
 
-    cd isabelle
+    cd afp_download_path/thys/AI_Planning_Languages_Semantics/
 
-    /Isabelle/directory/bin/isabelle build -d '$AFP' -D.
+    isabelle_download_directory/bin/isabelle build -cv -d . Verified_SAT_Based_AI_Planning
 
-  Note the single quotes around <code>'$AFP'</code> in build.sh!  This will
-  invoke Isabelle to check all proofs and re-generate the exported code, which
-  is written to <code> isabelle/code/PDDL_STRIPS_Checker_Exported.sml</code>
+  This will invoke Isabelle to check all proofs and re-generate the
+  exported code, which is written to <code> afp_download_path/thys/AI_Planning_Languages_Semantics/code/PDDL_STRIPS_Checker_Exported.sml</code>
 
  4) Download and install [MLton](http://mlton.org/) compiler version >=
  20100608.
 
  5) Build the generated sml code together with the pddl parser by running the
  following commands from the top directory
-
-    cd codeBase/planning/pddlParser/
-
-    mlton -cc-opt -O3 -cc-opt -g0 pddl_validate_plan.mlb
+  
+    mlton -mlb-path-var 'AFP_PATH afp_download_path' -cc-opt -O3 -cc-opt -g0 pddl_validate_plan.mlb
 
 Validating plans
 ================
