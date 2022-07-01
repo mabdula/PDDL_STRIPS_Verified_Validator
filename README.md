@@ -40,8 +40,7 @@ Building the validator
   This will invoke Isabelle to check all proofs and re-generate the
   exported code, which is written to <code> afp_download_path/thys/AI_Planning_Languages_Semantics/code/PDDL_STRIPS_Checker_Exported.sml</code>
 
- 4) Download and install [MLton](http://mlton.org/) compiler version >=
- 20100608.
+ 4) Download and install [MLton](http://mlton.org/) compiler version >= 20100608.
 
  5) Build the generated sml code together with the pddl parser by running the
  following commands from the top directory
