@@ -1,0 +1,10 @@
+Group is
+   $/basis.cm
+   $/smlnj-lib.cm
+   sources.cm
+
+   src/posix-symlink.sml
+   src/smackage-path.sml
+   src/smacklib.sml     
+   src/version.sml
+   src/main.sml

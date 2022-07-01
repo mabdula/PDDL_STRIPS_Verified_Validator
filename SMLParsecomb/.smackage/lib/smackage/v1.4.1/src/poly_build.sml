@@ -1,0 +1,18 @@
+use "src/poly_mlyacc.sml";
+use "src/poly_smlnj-lib.sml";
+use "src/posix-symlink.sml";
+use "src/semver.sml";
+use "src/protocol.sml";
+use "src/spec.sml";
+use "src/version-index.sml";
+use "src/get-git.sml";
+use "src/get-http.sml";
+use "src/install.sml";
+use "src/conductor.sig";
+use "src/conductor.sml";
+use "src/smackage-path.sml";
+use "src/smacklib.sml";
+use "src/configure.sml";
+use "src/main.sml";
+fun polyMain () = OS.Process.exit(Smack.main(CommandLine.name (), CommandLine.arguments ()));
+PolyML.export ("bin/polyml-smackage", polyMain);

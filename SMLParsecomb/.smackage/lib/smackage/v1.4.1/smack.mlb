@@ -1,0 +1,10 @@
+
+   $(SML_LIB)/basis/basis.mlb
+   sources.mlb
+
+   src/posix-symlink.sml
+   src/smackage-path.sml
+   src/smacklib.sml
+   src/version.sml
+   src/main.sml
+   src/go.sml
