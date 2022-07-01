@@ -1,3 +1,6 @@
+This parser combinator library was downloaded from https://github.com/standardml/parcom. The following is the original readme.
+
+
 parcom -- a parser combinator library
 
 This is a simple parser combinator library based on code by Chris
