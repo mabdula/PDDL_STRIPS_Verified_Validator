@@ -37,6 +37,6 @@ in
 end
 
 
-$(AFP_PATH)/thys/AI_Planning_Languages_Semantics/PDDL_STRIPS_Checker_Exported.sml
+$(AFP_PATH)/thys/AI_Planning_Languages_Semantics/code/PDDL_STRIPS_Checker_Exported.ML
 pddl_refactor.sml
 pddl_validate_plan.sml
